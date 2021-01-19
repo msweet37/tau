@@ -7,13 +7,25 @@ assignees: ''
 
 ---
 
+# I made a resolution, for this new year :
+
+I will never handle anymore a PR (Problem Report) which is posted without :
+- The result of  ```flutter pub deps | grep flutter_sound```
+- Your logs
+
+Without those two basic informations, I will close your PR without answering anything. I cannot spend all my times requesting over and over : 
+```
+I need your logs
+```
+
+----------------
+
 ## Flutter Sound Version : 
 
 - **FULL** or **LITE** flavor ?
 
 - **Important**: Result of the command : ```flutter pub deps | grep flutter_sound```
 
-----------------------------------------------------------
 
 ## Severity
 
@@ -25,7 +37,6 @@ assignees: ''
 
 - Minor issue ?
 
---------------------------------------------------------
 
 ## Platforms you faced the error 
 
@@ -39,7 +50,7 @@ assignees: ''
 
 - Real device ?
 
-------------------------------------------------
+## Your problem
 
 **Describe the bug**
 A clear and concise description of what the bug is.
@@ -50,10 +61,6 @@ Steps to reproduce the behavior:
 2. Click on '....'
 3. Scroll down to '....'
 4. See error
-----------------------------------------------
 
 # Logs!!!!
 (**This is very important**. Most of the time we cannot do anything if we do not have information on your bug)
-
-
------------------------------------------------------------------
