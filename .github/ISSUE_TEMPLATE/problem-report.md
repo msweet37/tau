@@ -7,6 +7,8 @@ assignees: ''
 
 ---
 
+---------------------------------------------------------------------------------------------------
+
 # I made a resolution, for this new year :
 
 I will never handle anymore a PR (Problem Report) which is posted without :
@@ -19,7 +21,7 @@ Without those three basic informations, I will close your PR without answering a
 I need your logs
 ```
 
-----------------
+---------------------------------------------------------------------------------------------------
 
 ## Flutter Sound Version : 
 
