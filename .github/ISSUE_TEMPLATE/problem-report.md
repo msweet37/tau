@@ -10,7 +10,7 @@ assignees: ''
 # I made a resolution, for this new year :
 
 I will never handle anymore a PR (Problem Report) which is posted without :
-- Android, iOS or Flutter Web
+- Your target : Android, iOS or Flutter Web
 - The result of  ```flutter pub deps | grep flutter_sound```
 - Your logs
 
