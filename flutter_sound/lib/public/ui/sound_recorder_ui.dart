@@ -80,8 +80,7 @@ class RecordedAudio {
 /// The `requestPermissions` callback allows you to provide an
 /// UI informing the user that we are about to ask for a permission.
 ///
-typedef UIRequestPermission = Future<bool> Function(
-    BuildContext context, Track track);
+typedef UIRequestPermission = Future<bool> Function(BuildContext context, Track track);
 
 /// A UI for recording audio.
 class SoundRecorderUI extends StatefulWidget {
@@ -263,10 +262,8 @@ class SoundRecorderUIState extends State<SoundRecorderUI> {
   Widget _buildButtons() {
     return Container(
         //height: 70,
-        decoration: BoxDecoration(
-            color: backgroundColor,
-            borderRadius:
-                BorderRadius.circular(SoundRecorderUI._barHeight / 2)),
+        decoration:
+            BoxDecoration(color: backgroundColor, borderRadius: BorderRadius.circular(SoundRecorderUI._barHeight / 2)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
@@ -285,8 +282,7 @@ class SoundRecorderUIState extends State<SoundRecorderUI> {
   }
 
   ///
-  Stream<RecordingDisposition> get dispositionStream =>
-      _recorder.dispositionStream();
+  Stream<RecordingDisposition> get dispositionStream => _recorder.dispositionStream();
 
   static const _minDbCircle = 15;
 
@@ -313,16 +309,14 @@ class SoundRecorderUIState extends State<SoundRecorderUI> {
                     // reasonable size (db ranges is typically 45 - 80db)
                     width: disposition.decibels + min,
                     height: disposition.decibels + min,
-                    constraints: BoxConstraints(
-                        maxHeight: 80.0 + min, maxWidth: 80.0 + min),
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.red),
+                    constraints: BoxConstraints(maxHeight: 80.0 + min, maxWidth: 80.0 + min),
+                    decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.red),
                   ),
                 ),
                 InkWell(
                   onTap: _onTapStartStop,
-                  child: Icon(_isStopped ? Icons.brightness_1 : Icons.stop,
-                      color: _isStopped ? Colors.red : Colors.black),
+                  child:
+                      Icon(_isStopped ? Icons.brightness_1 : Icons.stop, color: _isStopped ? Colors.red : Colors.black),
                 ),
               ]);
             }));
@@ -346,14 +340,11 @@ class SoundRecorderUIState extends State<SoundRecorderUI> {
         height: 50,
         width: 30,
         child: InkWell(
-            onTap:
-                _isStopped && widget.onDelete != null ? widget.onDelete : null,
+            onTap: _isStopped && widget.onDelete != null ? widget.onDelete : null,
             child: Icon(
               Icons.delete_outline,
               //size: 30,
-              color: _isStopped && widget.onDelete != null
-                  ? Colors.black
-                  : Colors.grey,
+              color: _isStopped && widget.onDelete != null ? Colors.black : Colors.grey,
             )));
   }
 
@@ -391,6 +382,7 @@ class SoundRecorderUIState extends State<SoundRecorderUI> {
       await _recorder.setSubscriptionDuration(Duration(milliseconds: 100));
       await _recorder.startRecorder(
         toFile: widget.audio.track.trackPath,
+        codec: widget.audio.track.codec,
       );
       _onStarted(wasUser: true);
       //Log.d(widget.audio.track.identity);

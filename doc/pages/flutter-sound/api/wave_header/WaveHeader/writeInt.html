@@ -29,9 +29,9 @@
     <li><a href="../../index.html">flutter_sound</a></li>
     <li><a href="../../wave_header/wave_header-library.html">wave_header</a></li>
     <li><a href="../../wave_header/WaveHeader-class.html">WaveHeader</a></li>
-    <li class="self-crumb">writeInt method</li>
+    <li class="self-crumb">writeint method</li>
   </ol>
-  <div class="self-name">writeInt</div>
+  <div class="self-name">writeint</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -50,7 +50,7 @@
       <li><a href="../../index.html">flutter_sound</a></li>
       <li><a href="../../wave_header/wave_header-library.html">wave_header</a></li>
       <li><a href="../../wave_header/WaveHeader-class.html">WaveHeader</a></li>
-      <li class="self-crumb">writeInt method</li>
+      <li class="self-crumb">writeint method</li>
     </ol>
     
     <h5>WaveHeader class</h5>
@@ -96,24 +96,24 @@
   </div><!--/.sidebar-offcanvas-->
 
   <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
-      <div><h1><span class="kind-method">writeInt</span> method </h1></div>
+      <div><h1><span class="kind-method">writeint</span> method </h1></div>
 
     <section class="multi-line-signature">
       <span class="returntype">void</span>
-            <span class="name ">writeInt</span>
-(<wbr><ol class="parameter-list"><li><span class="parameter" id="writeInt-param-out"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-async/EventSink-class.html">EventSink</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">out</span>, </span></li>
-<li><span class="parameter" id="writeInt-param-val"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">val</span></span></li>
+            <span class="name ">writeint</span>
+(<wbr><ol class="parameter-list"><li><span class="parameter" id="writeint-param-out"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-async/EventSink-class.html">EventSink</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">out</span>, </span></li>
+<li><span class="parameter" id="writeint-param-val"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">val</span></span></li>
 </ol>)
       
     </section>
     <section class="desc markdown">
-      <p>Push an int32 in the header</p>
+      <p>Push an Int16 in the header</p>
     </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
-      <pre class="language-dart"><code class="language-dart">static void writeInt(EventSink&lt;List&lt;int&gt;&gt; out, int val) {
-  out.add([val &gt;&gt; 0, val &gt;&gt; 8, val &gt;&gt; 16, val &gt;&gt; 24]);
+      <pre class="language-dart"><code class="language-dart">static void writeint(EventSink&lt;List&lt;int&gt;&gt; out, int val) async {
+  out.add([val &gt;&gt; 0, val &gt;&gt; 8]);
 }</code></pre>
     </section>
 
